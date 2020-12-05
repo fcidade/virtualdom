@@ -25,6 +25,7 @@ const content = <div>
   <h1 style="color: blue">teste</h1>
   <h3>opa eai</h3>
   <span>teste</span>
-</div>
-const dom = render(content)
+</div>;
+
+const dom = render(content);
 document.body.appendChild(dom);
