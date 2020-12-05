@@ -10,6 +10,10 @@ export default {
     format: 'iife',
     name: 'bundle'
   },
+  watch: {
+    exclude: 'node_modules/**',
+    include: 'src/**'
+  },
   plugins: [
     babel({
       exclude: 'node_modules/**'
