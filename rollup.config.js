@@ -15,11 +15,17 @@ export default {
     include: 'src/**'
   },
   plugins: [
-    babel({
-      exclude: 'node_modules/**'
-    }),
     resolve(),
-    commonjs(),
+    babel({
+      exclude: 'node_modules/**',
+      presets: [
+        "@babel/env", '@babel/preset-react'
+      ],
+      plugins: ["@babel/plugin-syntax-jsx"]
+    }),
+    commonjs({
+      exclude: 'src/**'
+    }),
     uglify()
   ]
 }
